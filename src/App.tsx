@@ -185,8 +185,8 @@ function App() {
         <DebugUI loadEngine={loadEngine} progress={progress} />
         <ModelsDropdown resetEngineAndChatHistory={resetEngineAndChatHistory} />
       </div>
-
-      <div className="max-w-3xl mx-auto flex flex-col h-screen">
+  
+      <div className="max-w-3xl mx-auto flex flex-col h-screen pt-16 sm:pt-0"> {/* Adjusted padding-top here */}
         {chatHistory.length === 0 ? (
           <div className="flex justify-center items-center h-full flex-col">
             <img
@@ -194,8 +194,8 @@ function App() {
               alt="Secret Llama"
               className="mx-auto w-32 rounded-full mb-4 mt-2"
             />
-            <div className="max-w-2xl flex flex-col justify-center ">
-              <h1 className="text-3xl font-medium  mb-8 leading-relaxed text-center">
+            <div className="max-w-2xl flex flex-col justify-center">
+              <h1 className="text-3xl font-medium mb-8 leading-relaxed text-center">
                 Welcome to Secret Llama
               </h1>
               <h2 className="text-base mb-4 prose text-popover-foreground">
@@ -238,6 +238,7 @@ function App() {
       </div>
     </div>
   );
+  
 }
 
 export default App;
