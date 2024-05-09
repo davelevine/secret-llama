@@ -188,7 +188,7 @@ function App() {
 
       <div className="max-w-3xl mx-auto flex flex-col h-screen">
         {chatHistory.length === 0 ? (
-          <div className="flex justify-center items-center h-full flex-col overflow-y-scroll">
+          <div className="flex justify-center items-center h-full flex-col">
             <img
               src="favicon.png"
               alt="Secret Llama"
@@ -198,11 +198,11 @@ function App() {
               <h1 className="text-3xl font-medium  mb-8 leading-relaxed text-center">
                 Welcome to Secret Llama
               </h1>
-              <h2 className="text-base mb-4 prose">
+              <h2 className="text-base mb-4 prose text-popover-foreground">
                 Secret Llama is a free and fully private chatbot. Unlike
                 ChatGPT, the models available here run entirely within your
                 browser which means:
-                <ol>
+                <ol className="list-decimal text-white">
                   <li>Your conversation data never leaves your computer.</li>
                   <li>
                     After the model is initially downloaded, you can disconnect
@@ -219,9 +219,10 @@ function App() {
                 <p>
                   This project is open source.{" "}
                   <a
-                    href="https://github.com/abi/secret-llama"
+                    href="https://github.com/davelevine/secret-llama"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="text-popover-foreground"
                   >
                     See the Github page
                   </a>{" "}
